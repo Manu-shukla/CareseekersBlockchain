@@ -5,8 +5,8 @@ App = {
   init: function() {
     // Load pets.
     $.getJSON('../pets.json', function(data) {
-      var petsRow = $('#petsRow');
-      var petTemplate = $('#petTemplate');
+      var petsRow = $('#petsRow'),
+       petTemplate = $('#petTemplate');
 
       for (i = 0; i < data.length; i ++) {
         petTemplate.find('.panel-title').text(data[i].name);
