@@ -1,5 +1,6 @@
 # CareseekersBlockchain
 Developer - Avinash Kumar Gupta ( MBBS 3rd Year )
+            Utkarsh Shukla (B-tech Final Year)
 
 Project Specification :- truffle, Node.
 
