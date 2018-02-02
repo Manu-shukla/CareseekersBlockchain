@@ -1,5 +1,6 @@
 class Block {
-    constructor(index, previousHash, timestamp, data, hash) {
+    // we can define initial values for defining values for constructor
+ constructor(index, previousHash, timestamp, data, hash) {
         this.index = index;
         this.previousHash = previousHash.toString();
         this.timestamp = timestamp;
