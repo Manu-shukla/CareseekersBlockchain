@@ -7,17 +7,13 @@ var formidable = require('formidable'),
  app.use(express.static(__dirname, '/public'));
  app.post('/upload', function(req, res) {
     var form = new formidable.IncomingForm();
-    form.parse(req, function(err, fields, files) {
-        // console.log(util.inspect({
-        //     fields: fields,
-        //     files: files
-        // }));
- 
+     
         fs.readFile(files.RemoteFile.path, function(err, data) {
             // save file from temp dir to new dir
             var newPath = __dirname + "/uploads/" + files.RemoteFile.name;
             fs.writeFile(newPath, data, function(err) {
                 if (err) throw err;
+             else
                 console.log('file saved');  
                 res.end();
             });
